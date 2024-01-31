@@ -9,7 +9,7 @@ class Square:
         """square
 
         args:
-            self:
+            self: instance
             size: size of square
         """
         self.__size = size

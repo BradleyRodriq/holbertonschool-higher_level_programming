@@ -9,7 +9,7 @@ class Square:
         """square
 
         args:
-            self
+            self: instance
             size: size of square
         """
         if not isinstance(size, int):
