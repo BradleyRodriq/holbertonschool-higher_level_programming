@@ -9,6 +9,6 @@ def is_same_class(obj, a_class):
         obj: object to check
         a_class: class to check against
     """
-    if type(obj) == a_class:
+    if type(obj) is a_class:
         return True
     return False
