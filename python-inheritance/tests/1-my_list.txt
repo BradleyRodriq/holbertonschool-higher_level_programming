@@ -1,4 +1,6 @@
 ::
+no arguments:
+::
 
     >>> MyList = __import__('1-my_list').MyList
     >>> my_list = MyList()
@@ -11,6 +13,8 @@
     []
 
 ::
+one argument
+::
 
     >>> my_list = MyList([1, 2, 3])
     >>> print(my_list)
@@ -21,3 +25,17 @@
     >>> my_list = MyList(None)
     Traceback (most recent call last):
     TypeError: 'NoneType' object is not iterable
+
+::
+two arguments
+::
+
+    >>> my_list = MyList([1, 2], [3, 4])
+    Traceback (most recent call last):
+      File "/usr/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 1-my_list.txt[7]>", line 1, in <module>
+        my_list = MyList([1, 2], [3, 4])
+    TypeError: list expected at most 1 argument, got 2
+
+::
