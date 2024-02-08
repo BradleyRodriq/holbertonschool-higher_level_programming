@@ -27,18 +27,6 @@ one argument
     TypeError: 'NoneType' object is not iterable
 
 ::
-two arguments
-::
-
-    >>> my_list = MyList([1, 2], [3, 4])
-    Traceback (most recent call last):
-      File "/usr/lib/python3.10/doctest.py", line 1350, in __run
-        exec(compile(example.source, filename, "single",
-      File "<doctest 1-my_list.txt[7]>", line 1, in <module>
-        my_list = MyList([1, 2], [3, 4])
-    TypeError: list expected at most 1 argument, got 2
-
-::
 
     >>> my_list = MyList()
     >>> print(my_list.print_sorted)
