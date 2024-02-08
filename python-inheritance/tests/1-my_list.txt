@@ -60,3 +60,14 @@ The order of the original list is not altered after a call to the method.
 Note that lists of strings are sorted lexographically.
 
 ::
+
+::
+
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+
+If ``print_sorted(...)`` is called on a list of different types, a TypeError
+will be raised.
+
+::
