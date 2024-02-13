@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """rectangle"""
-from os import error
+
 from models.base import Base
 
 
@@ -93,3 +93,11 @@ class Rectangle(Base):
             for i in range(self.__width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """string"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
+
+
