@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """Base Class"""
-
-
 import json
+
 
 class Base():
     """
