@@ -4,7 +4,7 @@
 
 import json
 
-class Base:
+class Base():
     """
     Base class for all other classes in the project.
     """
