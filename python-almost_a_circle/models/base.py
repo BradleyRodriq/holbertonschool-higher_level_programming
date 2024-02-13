@@ -1,20 +1,20 @@
 #!/usr/bin/python3
 """base"""
 
-
 class Base:
-    """base"""
+    """
+    Base class for all other classes in the project.
+    """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """init
+        """
+        Initializes a new instance of the Base class.
 
         Args:
-            self: instance
-            id: instance id
+            id (int): The ID of the instance. If not provided, a unique ID will be assigned.
         """
-
         if id is not None:
             self.id = id
         else:
