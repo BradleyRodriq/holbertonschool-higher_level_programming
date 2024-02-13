@@ -139,6 +139,13 @@ class Rectangle(Base):
                                                        self.width, self.height)
 
     def update(self, *args):
+        """
+        Update the attributes of the Rectangle object.
+
+        Args:
+            *args: Variable length argument list containing the new values for the attributes.
+                   The order of the arguments should be: id, width, height, x, y.
+        """
         if args:
             for count, arg in enumerate(args):
                 if count == 0:
