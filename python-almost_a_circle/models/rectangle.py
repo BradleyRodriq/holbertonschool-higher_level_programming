@@ -140,15 +140,21 @@ class Rectangle(Base):
                                                        self.x, self.y,
                                                        self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Update the attributes of the Rectangle object.
 
         Args:
             *args: Variable length argument list containing
             the new values for the attributes.
-                   The order of the arguments should be:
-                   id, width, height, x, y.
+                    The order of the arguments should be:
+                    id, width, height, x, y.
+            **kwargs: Keyword arguments containing the new values
+            for the attributes. The keys should be the attribute names
+            and the values should be the new values.
+
+        Returns:
+            None
         """
         if args:
             for count, arg in enumerate(args):
@@ -164,3 +170,17 @@ class Rectangle(Base):
                     self.__y = arg
                 else:
                     continue
+        elif kwargs and args != 0:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                elif key == "width":
+                    self.__width = value
+                elif key == "height":
+                    self.__height = value
+                elif key == "x":
+                    self.__x = value
+                elif key == "y":
+                    self.__y = value
+                else:
+                    break
