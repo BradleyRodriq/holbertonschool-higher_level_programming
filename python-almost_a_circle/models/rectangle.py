@@ -110,6 +110,17 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        """
+        Setter method for the x-coordinate of the Rectangle.
+
+        Args:
+            value (int): The new value for the x-coordinate.
+
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is less than 0.
+
+        """
         if type(value) != int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -125,6 +136,19 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """
+        Setter method for the 'y' attribute of the Rectangle class.
+
+        Args:
+            value (int): The new value for the 'y' attribute.
+
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is less than 0.
+
+        Returns:
+            None
+        """
         if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
