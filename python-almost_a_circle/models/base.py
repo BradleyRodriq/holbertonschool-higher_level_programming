@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """base"""
 
+
 class Base:
     """
     Base class for all other classes in the project.
@@ -13,7 +14,8 @@ class Base:
         Initializes a new instance of the Base class.
 
         Args:
-            id (int): The ID of the instance. If not provided, a unique ID will be assigned.
+            id (int): The ID of the instance. If not provided,
+                a unique ID will be assigned.
         """
         if id is not None:
             self.id = id
