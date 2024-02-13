@@ -9,7 +9,6 @@ class Rectangle(Base):
 
     Represents a rectangle with a specified width, height, position, and ID.
     """
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Initializes a Rectangle object.
