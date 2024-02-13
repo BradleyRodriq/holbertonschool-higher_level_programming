@@ -4,6 +4,31 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """
+    Rectangle Class
+
+    Represents a rectangle with a specified width, height, position, and ID.
+    """
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """
+        Initializes a Rectangle object.
+
+        Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+            x (int, optional): The x-coordinate of the rectangle's position. Defaults to 0.
+            y (int, optional): The y-coordinate of the rectangle's position. Defaults to 0.
+            id (int, optional): The ID of the rectangle. Defaults to None.
+        """
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+
+    # Rest of the code...
+class Rectangle(Base):
     """Rectangle Class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """
