@@ -8,7 +8,12 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """init"""
+        """init
+
+        Args:
+            self: instance
+            id: instance id
+        """
 
         if id is not None:
             self.id = id
