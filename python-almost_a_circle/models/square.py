@@ -55,7 +55,7 @@ class Square(Rectangle):
             *args: Variable length argument list containing
             the new values for the attributes.
                     The order of the arguments should be:
-                    id, width, height, x, y.
+                    id, size, x, y.
             **kwargs: Keyword arguments containing the new values
             for the attributes. The keys should be the attribute names
             and the values should be the new values.
@@ -87,6 +87,16 @@ class Square(Rectangle):
                     self.y = value
                 else:
                     break
+    def to_dictionary(self):
+            """
+            Returns a dictionary representation of the Square instance.
+            """
+            return {
+                "id": self.id,
+                "size": self.size,
+                "x": self.x,
+                "y": self.y
+            }
 
     def __str__(self):
         """
