@@ -96,6 +96,7 @@ class TestRectangle(unittest.TestCase):
         r.y = 10
         self.assertEqual(10, r.y)
 
+
 class TestRectangle_sizes(unittest.TestCase):
     """Test Rectangle"""
 
