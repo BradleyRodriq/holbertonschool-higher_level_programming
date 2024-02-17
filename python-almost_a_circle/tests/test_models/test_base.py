@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """unittests for base.py"""
-
+import os
 from typing import Type
 import unittest
 from models.base import Base
@@ -169,6 +169,18 @@ class TestBase_create(unittest.TestCase):
 class TestBase_load_from_file(unittest.TestCase):
     """Test Base"""
 
+    @classmethod
+    def tearDown(self):
+        """Delete any created files."""
+        try:
+            os.remove("Rectangle.json")
+        except IOError:
+            pass
+        try:
+            os.remove("Square.json")
+        except IOError:
+            pass
+
     def test_load_from_file_rectangle(self):
         rect = Rectangle(5, 4, 3, 2, 1)
         rect2 = Rectangle(6, 7, 8, 9, 0)
@@ -176,12 +188,48 @@ class TestBase_load_from_file(unittest.TestCase):
         rect_list = Rectangle.load_from_file()
         self.assertEqual(str(rect2), str(rect_list[1]))
 
+    def test_load_from_file_second_rectangle(self):
+        r1 = Rectangle(10, 7, 2, 8, 1)
+        r2 = Rectangle(2, 4, 5, 6, 2)
+        Rectangle.save_to_file([r1, r2])
+        list_rectangles_output = Rectangle.load_from_file()
+        self.assertEqual(str(r2), str(list_rectangles_output[1]))
+
+    def test_load_from_file_rectangle_types(self):
+        r1 = Rectangle(10, 7, 2, 8, 1)
+        r2 = Rectangle(2, 4, 5, 6, 2)
+        Rectangle.save_to_file([r1, r2])
+        output = Rectangle.load_from_file()
+        self.assertTrue(all(type(obj) == Rectangle for obj in output))
+
     def test_load_from_file_square(self):
         sq = Square(5, 4, 3, 2)
         sq2 = Square(6, 7, 8, 9)
         Square.save_to_file([sq, sq2])
         sq_list = Square.load_from_file()
         self.assertEqual(str(sq2), str(sq_list[1]))
+
+    def test_load_from_file_second_square(self):
+        s1 = Square(5, 1, 3, 3)
+        s2 = Square(9, 5, 2, 3)
+        Square.save_to_file([s1, s2])
+        list_squares_output = Square.load_from_file()
+        self.assertEqual(str(s2), str(list_squares_output[1]))
+
+    def test_load_from_file_square_types(self):
+        s1 = Square(5, 1, 3, 3)
+        s2 = Square(9, 5, 2, 3)
+        Square.save_to_file([s1, s2])
+        output = Square.load_from_file()
+        self.assertTrue(all(type(obj) == Square for obj in output))
+
+    def test_load_from_file_no_file(self):
+        output = Square.load_from_file()
+        self.assertEqual([], output)
+
+    def test_load_from_file_more_than_one_arg(self):
+        with self.assertRaises(TypeError):
+            Base.load_from_file([], 1)
 
 
 if __name__ == '__main__':
