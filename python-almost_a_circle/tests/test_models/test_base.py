@@ -119,5 +119,6 @@ class TestBase_load_from_file(unittest.TestCase):
         sq_list = Square.load_from_file()
         self.assertEqual(str(sq2), str(sq_list[1]))
 
+
 if __name__ == '__main__':
     unittest.main()

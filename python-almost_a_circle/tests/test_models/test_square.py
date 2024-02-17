@@ -197,6 +197,7 @@ class TestSquare_update_args_kwargs(unittest.TestCase):
         sq.update(id=89, x=1, y=3, size=4)
         self.assertEqual("[Square] (89) 1/3 - 4", str(sq))
 
+
 class TestSquare_to_dictionary(unittest.TestCase):
     """Test Square"""
 
@@ -204,6 +205,7 @@ class TestSquare_to_dictionary(unittest.TestCase):
         sq = Square(10, 2, 1, 1)
         correct = {'id': 1, 'x': 2, 'size': 10, 'y': 1}
         self.assertDictEqual(correct, sq.to_dictionary())
+
 
 if __name__ == '__main__':
     unittest.main()

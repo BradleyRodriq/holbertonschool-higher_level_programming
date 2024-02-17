@@ -221,5 +221,6 @@ class TestRectangle_to_dictionary(unittest.TestCase):
         correct = {'x': 1, 'y': 9, 'id': 5, 'height': 2, 'width': 10}
         self.assertDictEqual(correct, r.to_dictionary())
 
+
 if __name__ == '__main__':
     unittest.main()
