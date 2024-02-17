@@ -123,6 +123,122 @@ class TestRectangle_sizes(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
             Rectangle(2, -1)
 
+    def test_str_width(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle("invalid", 2)
+
+    def test_float_width(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle(5.5, 1)
+
+    def test_complex_width(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle(complex(5), 2)
+
+    def test_dict_width(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle({"a": 1, "b": 2}, 2)
+
+    def test_bool_width(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle(True, 2)
+
+    def test_list_width(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle([1, 2, 3], 2)
+
+    def test_set_width(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle({1, 2, 3}, 2)
+
+    def test_tuple_width(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle((1, 2, 3), 2)
+
+    def test_frozenset_width(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle(frozenset({1, 2, 3, 1}), 2)
+
+    def test_range_width(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle(range(5), 2)
+
+    def test_bytes_width(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle(b'Python', 2)
+
+    def test_bytearray_width(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle(bytearray(b'abcdefg'), 2)
+
+    def test_memoryview_width(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle(memoryview(b'abcedfg'), 2)
+
+    def test_inf_width(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle(float('inf'), 2)
+
+    def test_nan_width(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Rectangle(float('nan'), 2)
+
+    def test_str_height(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, "invalid")
+
+    def test_float_height(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, 5.5)
+
+    def test_complex_height(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, complex(5))
+
+    def test_dict_height(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, {"a": 1, "b": 2})
+
+    def test_list_height(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, [1, 2, 3])
+
+    def test_set_height(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, {1, 2, 3})
+
+    def test_tuple_height(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, (1, 2, 3))
+
+    def test_frozenset_height(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, frozenset({1, 2, 3, 1}))
+
+    def test_range_height(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, range(5))
+
+    def test_bytes_height(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, b'Python')
+
+    def test_bytearray_height(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, bytearray(b'abcdefg'))
+
+    def test_memoryview_height(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, memoryview(b'abcedfg'))
+
+    def test_inf_height(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, float('inf'))
+
+    def test_nan_height(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(1, float('nan'))
+
 
 class TestRectangle_xy(unittest.TestCase):
     """Test Rectangle"""
