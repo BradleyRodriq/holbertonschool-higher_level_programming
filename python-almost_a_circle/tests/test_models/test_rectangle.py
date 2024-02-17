@@ -100,6 +100,7 @@ class TestRectangle_area(unittest.TestCase):
         rect = Rectangle(10, 2)
         self.assertEqual(20, rect.area())
 
+
 class TestRectangle_str(unittest.TestCase):
     """Test Rectangle"""
 
@@ -210,6 +211,7 @@ class TestRectangle_update(unittest.TestCase):
         rect = Rectangle(10, 10, 10, 10, 10)
         rect.update(y=5, x=8, id=99, width=1, height=2)
         self.assertEqual("[Rectangle] (99) 8/5 - 1/2", str(rect))
+
 
 class TestRectangle_to_dictionary(unittest.TestCase):
     """Rectangle Test"""
