@@ -1,8 +1,11 @@
+#!/usr/bin/python3
+"""Test Square"""
 import unittest
 from models.square import Square
 
+
 class TestSquare(unittest.TestCase):
-    """TestSquare"""
+    """Test Square"""
 
     def test_square_creation(self):
         sq = Square(5, 2, 3, 1)
