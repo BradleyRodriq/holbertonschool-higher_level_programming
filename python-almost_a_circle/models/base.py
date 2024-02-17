@@ -46,8 +46,8 @@ class Base():
             if list_objs is None:
                 jsonfile.write("[]")
             else:
-                list_objs = [object.to_dictionary() for object in list_objs]
-                jsonfile.write(cls.to_json_string(list_objs))
+                list = [object.to_dictionary() for object in list_objs]
+                jsonfile.write(cls.to_json_string(list))
 
     @staticmethod
     def from_json_string(json_string):
