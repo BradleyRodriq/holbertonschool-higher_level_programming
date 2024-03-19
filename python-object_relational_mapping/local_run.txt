@@ -1,0 +1,4 @@
+# replace the dtb with this code to test locally
+
+    password = '2792'
+    dtb = MySQLdb.connect(user='root', passwd=password, db='hbtn_0e_0_usa')
