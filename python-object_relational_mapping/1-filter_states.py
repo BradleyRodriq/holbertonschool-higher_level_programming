@@ -14,7 +14,7 @@ if __name__ == "__main__":
                           passwd=sys.argv[2], db=sys.argv[3])
     cursor = dtb.cursor()
     cursor.execute("SELECT * FROM states \
-                    WHERE name LIKE BINARY '%N' \
+                    WHERE name LIKE BINARY 'N%' \
                     ORDER BY states.id ASC")
     rows = cursor.fetchall()
     for row in rows:
