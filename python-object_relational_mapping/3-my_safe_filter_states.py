@@ -17,7 +17,7 @@ if __name__ == "__main__":
     function =  "SELECT * FROM states \
                 WHERE name LIKE BINARY %(name)s \
                 ORDER BY states.id ASC "
-    curs.execute(function, (sys.argv[4]))
+    curs.execute(function, (sys.argv[4],))
     rows = curs.fetchall()
     for row in rows:
         print(row)
