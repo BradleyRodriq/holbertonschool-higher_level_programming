@@ -19,5 +19,6 @@ if __name__ == "__main__":
                 "ORDER BY states.id ASC ",
                 {'name': sys.argv[4]})
     rows = curs.fetchall()
-    for row in rows:
-        print(row)
+    if rows is not None:
+        for row in rows:
+            print(row)
