@@ -1,5 +1,3 @@
-Here's the breakdown of the additional questions:
-
 1. **What is a superclass, base class, or parent class**:
    - A superclass, base class, or parent class is a class from which another class (subclass) inherits attributes and methods.
    - The subclass can extend or modify the behavior of the superclass.
