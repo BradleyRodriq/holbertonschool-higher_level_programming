@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def fibonacci(num):
+def fibonacci(n):
     sequence = [10, 20]
     for i in range(2, n):
         sequence.append(sequence[i-1] + sequence[i-2])
