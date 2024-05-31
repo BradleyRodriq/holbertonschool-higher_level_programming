@@ -161,5 +161,5 @@ input.addEventListener('change', function() {
 ---
 
 
-# Author
+## Author
 Bradley A. Rodriguez Corsino
