@@ -15,6 +15,7 @@ Sure! Here's a detailed and good-looking README template that answers each of yo
 7. [Making a Request with Fetch API](#making-a-request-with-fetch-api)
 8. [Listening/Binding to DOM Events](#listeningbinding-to-dom-events)
 9. [Listening/Binding to User Events](#listeningbinding-to-user-events)
+10. [Author](#author)
 
 ---
 
